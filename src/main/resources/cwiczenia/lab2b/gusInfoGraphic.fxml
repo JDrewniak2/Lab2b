@@ -3,12 +3,21 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cwiczenia.lab2b.HelloController">
    <children>
       <Button layoutX="77.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnOpenFileAction" text="Otwórz plik" textFill="RED" />
       <Label fx:id="lbFile" layoutX="214.0" layoutY="68.0" prefHeight="17.0" prefWidth="531.0" style="-fx-font-style: italic;" text="Proszę wczytać plik ..." />
+      <TextField fx:id="txtAdresStrony" editable="false" layoutX="54.0" layoutY="585.0" prefHeight="25.0" prefWidth="569.0" />
+      <Label layoutX="400.0" layoutY="144.0" text="Miniaturka" />
+      <ImageView fx:id="imgMiniatura" fitHeight="269.0" fitWidth="347.0" layoutX="400.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnPokazInfografike" layoutX="682.0" layoutY="462.0" mnemonicParsing="false" text="Pokaż" />
+      <Button fx:id="btnPrzejdzDoStrony" layoutX="656.0" layoutY="585.0" mnemonicParsing="false" text="Załaduj" />
       <ListView fx:id="lstInfografiki" layoutX="54.0" layoutY="124.0" prefHeight="381.0" prefWidth="306.0" />
+      <Label layoutX="63.0" layoutY="107.0" text="Infografiki" />
+      <Label layoutX="63.0" layoutY="568.0" text="Adres strony" />
    </children>
 </AnchorPane>
