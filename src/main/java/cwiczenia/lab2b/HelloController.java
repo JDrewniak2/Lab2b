@@ -31,14 +31,17 @@ public class HelloController {
     ObservableList<String> tytuly = FXCollections.observableArrayList();
     GusInfoGraphicList igList;
     @FXML
+    private Infografika selInfografika;
     public void initialize(){
         fileChooser.getExtensionFilters().add(xmlFilter);
         lstInfografiki.getSelectionModel().selectedIndexProperty().addListener(
                 new ChangeListener<Number>() {
                     @Override
                     public void changed(ObservableValue<? extends Number> observableValue, Number old_val, Number new_val) {
+
                         int index = new_val.intValue();
                         if (index != -1){
+                            selInfografika = igList.infografiki.get(index);
                             txtAdresStrony.setText(igList.infografiki.get(index).adresStrony);
                             Image image = new Image(igList.infografiki.get(index).adresGrafiki);
                             imgMiniatura.setImage(image);
@@ -46,6 +49,7 @@ public class HelloController {
                         else{
                             txtAdresStrony.setText("");
                             imgMiniatura.setImage(null);
+                            selInfografika = null;
                         }
                     }
                 }
@@ -61,6 +65,12 @@ public class HelloController {
         }
         else{
             lbFile.setText("Proszę wczytać plik ...");
+        }
+    }
+
+    public void bntZaladujStrone(ActionEvent actionEvent) {
+        if (selInfografika != null){
+            //hostServices.showDocument(selInfografika.adresStrony);
         }
     }
 }
