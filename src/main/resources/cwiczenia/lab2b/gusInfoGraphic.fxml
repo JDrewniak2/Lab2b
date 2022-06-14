@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cwiczenia.lab2b.HelloController">
+   <children>
+      <Button layoutX="77.0" layoutY="64.0" mnemonicParsing="false" onAction="#btnOpenFileAction" text="Otwórz plik" textFill="RED" />
+      <Label fx:id="lbFile" layoutX="214.0" layoutY="68.0" prefHeight="17.0" prefWidth="531.0" style="-fx-font-style: italic;" text="Proszę wczytać plik ..." />
+   </children>
+</AnchorPane>
